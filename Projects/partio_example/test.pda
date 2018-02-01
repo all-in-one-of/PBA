@@ -1,0 +1,9 @@
+ATTRIBUTES
+ m position v
+TYPES
+ V V V
+NUMBER_OF_PARTICLES: 3
+BEGIN DATA
+0 0 0 0 0 0 0 
+1 1 1 1 1 1 1 
+2 2 2 2 2 2 2 
