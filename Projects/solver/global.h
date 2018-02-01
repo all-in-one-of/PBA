@@ -428,25 +428,25 @@ void parse(const std::string &filename, const std::string &output)
 }
 
 // Solve Ax = b
-void solveLinearSystem()
-{
-	Eigen::VectorXd x = Eigen::VectorXd(3 * segment.particles.numParticles);
-	for(int i = 0; i < segment.particles.numParticles; i++) {
-		if(	i >= 3 * segment.particles.numParticles || 
-			i + 1 >= 3 * segment.particles.numParticles || 
-			i + 2 >= 3 * segment.particles.numParticles) 
-		{
-			break;
-		}
+// void solveLinearSystem()
+// {
+// 	Eigen::VectorXd x = Eigen::VectorXd(3 * segment.particles.numParticles);
+// 	for(int i = 0; i < segment.particles.numParticles; i++) {
+// 		if(	i >= 3 * segment.particles.numParticles || 
+// 			i + 1 >= 3 * segment.particles.numParticles || 
+// 			i + 2 >= 3 * segment.particles.numParticles) 
+// 		{
+// 			break;
+// 		}
 
-		Eigen::VectorXd part = segment.particles.positions.at(i);
-		// std::cout << part[0] << " " << part[1] << " " << part[2] << std::endl;
+// 		Eigen::VectorXd part = segment.particles.positions.at(i);
+// 		// std::cout << part[0] << " " << part[1] << " " << part[2] << std::endl;
 
-		x[3 * i] 		= part[0];	// x
-		x[3 * i + 1] 	= part[1];	// y
-		x[3 * i + 2] 	= part[2];	// z
-	}
+// 		x[3 * i] 		= part[0];	// x
+// 		x[3 * i + 1] 	= part[1];	// y
+// 		x[3 * i + 2] 	= part[2];	// z
+// 	}
 
-	Eigen::VectorXd b = segment.particles.masses * x;
-	std::cout << b << std::endl;
-}
+// 	Eigen::VectorXd b = segment.particles.masses * x;
+// 	std::cout << b << std::endl;
+// }
